@@ -1,0 +1,55 @@
+body {
+  font-family: sans-serif;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container .textfield {
+  position: relative;
+}
+
+.input-container label {
+  color: gray;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  position: absolute;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transform-origin: left top;
+  transform: translateY(-50%);
+  font-family: sans-serif;
+  background-color: white;
+  pointer-events: none;
+  transition: 0.1s ease-out;
+}
+
+.input-container input {
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: blue;
+  color: black;
+}
+
+.input-container input:focus + label {
+  color: blue;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.input-container
+  input[value]:not([value=""])
+  + label {
+  top: 0;
+}
